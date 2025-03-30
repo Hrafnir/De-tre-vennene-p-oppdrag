@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
             clickableAreas: [
                 // Bruker koordinatene du fant i Photoshop
                 // **** VIKTIG: Erstatt tallene under med de DU fant ****
-                { id: 'mia-area', action: 'startDialogueMia', rectCoords: { x1: 150, y1: 100, x2: 250, y2: 350 } }
+                { id: 'mia-area', action: 'startDialogueMia', rectCoords: { x1: 1022, y1: 297, x2: 1349, y2: 1000 } }
             ],
             initialText: "Dere får øye på en eldre jente som sitter alene og gråter."
         },
