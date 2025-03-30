@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
             mapAreas: [] // Ingen klikkbare områder på startbildet
         },
         scene2_mia: {
-            image: "images/DTV2.jpg", // ANTATT FILNAVN! Endre om nødvendig
+            image: "images/DTV2.png", // ANTATT FILNAVN! Endre om nødvendig
             alt: "Gråtende jente (Mia)",
             mapAreas: [
                 // DEFINER OMRÅDET FOR MIA HER! Juster koordinatene (x1,y1,x2,y2 for rektangel)
