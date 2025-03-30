@@ -1,39 +1,44 @@
-// Vent til hele HTML-siden er lastet inn før vi kjører koden
 document.addEventListener('DOMContentLoaded', () => {
-
-    // Finn HTML-elementene vi trenger å manipulere
     const gameImage = document.getElementById('game-image');
     const startButton = document.getElementById('start-button');
     const choicesDiv = document.getElementById('choices');
-    const backgroundMusic = document.getElementById('background-music'); // *** Henter lydelementet ***
+    const backgroundMusic = document.getElementById('background-music');
 
-    // Sjekk at vi faktisk fant alle elementene (inkludert musikk)
-    if (!gameImage || !startButton || !choicesDiv || !backgroundMusic) { // *** Sjekker også musikkelementet ***
-        console.error("Klarte ikke å finne et eller flere nødvendige HTML-elementer!");
-        return; // Avslutt hvis noe mangler
+    if (!gameImage || !startButton || !choicesDiv || !backgroundMusic) {
+        console.error("FEIL: Fant ikke alle HTML-elementene!");
+        // Skriver ut hvilke som eventuelt mangler:
+        if (!gameImage) console.error("Mangler #game-image");
+        if (!startButton) console.error("Mangler #start-button");
+        if (!choicesDiv) console.error("Mangler #choices");
+        if (!backgroundMusic) console.error("Mangler #background-music");
+        return;
+    } else {
+        console.log("Alle HTML-elementer funnet OK."); // Bekreftelse
     }
 
-    // Legg til en lytter for klikk på startknappen
     startButton.addEventListener('click', () => {
-        console.log("Startknapp klikket!"); // For feilsøking i konsollen
+        console.log("Startknapp klikket!");
 
-        // Bytt bilde til DTV1.jpg (som skal fungere)
+        // Bytt bilde
         gameImage.src = 'images/DTV1.jpg';
         gameImage.alt = 'Scene 1';
+        console.log("Bildet byttet til DTV1.jpg.");
 
-        // Fjern startknappen (eller hele knapp-området)
+        // Fjern startknappen
         choicesDiv.innerHTML = '';
+        console.log("Startknapp fjernet.");
 
-        // *** START MUSIKKEN ***
-        // Prøver å spille av og fanger opp eventuelle feil
+        // Start bakgrunnsmusikken
+        console.log("Prøver å starte musikk nå..."); // Rett før play()
+        console.log("Referanse til lydelement:", backgroundMusic); // Sjekk at det er et audio-element
+
         backgroundMusic.play().then(() => {
-            console.log("Musikk startet.");
+            console.log("SUKSESS: Musikk .play() fullført (Promise resolved)."); // Inne i .then()
         }).catch(error => {
-            console.error("Kunne ikke spille av lyd:", error);
+            // VIKTIG: Denne SKAL fange opp feil hvis nettleseren blokkerer!
+            console.error("FEIL: Musikk .play() feilet (Promise rejected):", error); // Inne i .catch()
         });
-        // *** SLUTT PÅ MUSIKK-KODE ***
 
-        console.log("Bildet byttet og forsøk på å starte musikk gjort.");
+        console.log("Kommando for musikkavspilling er sendt."); // Rett etter play()
     });
-
-}); // Slutt på DOMContentLoaded
+});
