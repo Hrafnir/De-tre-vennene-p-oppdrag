@@ -4,9 +4,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Finn HTML-elementene vi trenger å manipulere
     const gameImage = document.getElementById('game-image');
     const startButton = document.getElementById('start-button');
-    const choicesDiv = document.getElementById('choices'); // Vi trenger denne for å fjerne knappen
+    const choicesDiv = document.getElementById('choices');
 
-    // Sjekk at vi faktisk fant elementene (god praksis for feilsøking)
+    // Sjekk at vi faktisk fant elementene
     if (!gameImage || !startButton || !choicesDiv) {
         console.error("Klarte ikke å finne et eller flere nødvendige HTML-elementer!");
         return; // Avslutt hvis noe mangler
@@ -16,15 +16,16 @@ document.addEventListener('DOMContentLoaded', () => {
     startButton.addEventListener('click', () => {
         console.log("Startknapp klikket!"); // For feilsøking i konsollen
 
-        // Bytt bilde til DTV1.png
-        gameImage.src = 'images/DTV1.png';
+        // Bytt bilde til DTV1.jpg - OPPDATERT FILNAVN/FORMAT
+        gameImage.src = 'images/DTV1.jpg';
         gameImage.alt = 'Scene 1'; // Oppdater alt-teksten også
 
-        // Fjern startknappen (eller hele choices-diven hvis det er den eneste knappen)
-        // startButton.remove(); // Fjerner bare knappen
-        choicesDiv.innerHTML = ''; // Tømmer hele knapp-området - enklere hvis flere knapper skal komme senere
+        // Fjern startknappen (eller hele knapp-området)
+        choicesDiv.innerHTML = '';
 
-        console.log("Bildet byttet til DTV1.png og startknapp fjernet.");
+        console.log("Bildet byttet til DTV1.jpg og startknapp fjernet.");
+
+        // Hvis du legger til lyd senere, kan .play()-kallet komme her
     });
 
 }); // Slutt på DOMContentLoaded
