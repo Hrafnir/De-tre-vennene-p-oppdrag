@@ -47,8 +47,8 @@ document.addEventListener('DOMContentLoaded', () => {
         scene2_mia: {
             // **** VIKTIG: Sett inn RIKTIG filnavn og ORIGINALE dimensjoner ****
             image: "images/DTV2.png",
-            originalWidth: 800,  // <= SETT INN FAKTISK BREDDE I PIKSLER
-            originalHeight: 600, // <= SETT INN FAKTISK HØYDE I PIKSLER
+            originalWidth: 1535,  // <= SETT INN FAKTISK BREDDE I PIKSLER
+            originalHeight: 1023, // <= SETT INN FAKTISK HØYDE I PIKSLER
             alt: "Gråtende jente (Mia)",
             clickableAreas: [
                 // Bruker koordinatene du fant i Photoshop
