@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Definer scener og dialog (forenklet start)
     const scenes = {
         start: {
-            image: "images/DTVStartbilde.jpg",
+            image: "images/ChatGPT Image 30. mars 2025, 19_26_00.png",
             alt: "Startbilde",
             mapAreas: [] // Ingen klikkbare områder på startbildet
         },
