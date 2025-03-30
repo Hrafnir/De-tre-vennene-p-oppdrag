@@ -1,0 +1,61 @@
+body {
+    font-family: sans-serif; /* Enkel standard font */
+    display: flex; /* Bruker flexbox for å sentrere spill-containeren */
+    justify-content: center;
+    align-items: flex-start; /* Justerer til toppen */
+    min-height: 100vh; /* Sørger for at body dekker minst hele høyden */
+    margin: 0;
+    background-color: #f0f0f0; /* Lys grå bakgrunn */
+}
+
+#game-container {
+    max-width: 800px; /* Setter en maks bredde for spillet */
+    width: 90%; /* Tar opp 90% av bredden, opp til maks */
+    background-color: #fff; /* Hvit bakgrunn for selve spillet */
+    padding: 20px;
+    margin-top: 20px; /* Litt luft på toppen */
+    border-radius: 8px; /* Avrundede hjørner */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Litt skygge */
+    text-align: center; /* Sentrerer tittel og eventuell tekst */
+}
+
+#scene-display {
+    position: relative; /* Viktig for å posisjonere knappen inni */
+    display: inline-block; /* Gjør at div-en tilpasser seg bildets bredde */
+    margin-bottom: 20px; /* Luft under bildet */
+}
+
+#game-image {
+    display: block; /* Gjør at bildet oppfører seg som en blokk */
+    max-width: 100%; /* Bildet skalerer ned hvis containeren er smalere */
+    height: auto; /* Beholder sideforholdet */
+    border: 1px solid #ccc; /* En tynn grå ramme rundt bildet */
+}
+
+#choices {
+    position: absolute; /* Plasseres i forhold til #scene-display */
+    bottom: 20px;       /* 20 piksler fra bunnen av bilde-containeren */
+    left: 50%;          /* Starter 50% fra venstre kant */
+    transform: translateX(-50%); /* Flytter seg selv 50% av sin egen bredde tilbake = sentrert */
+    z-index: 10; /* Sikrer at knappene ligger over bildet */
+}
+
+#choices button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer; /* Viser en hånd når man holder over */
+    background-color: #4CAF50; /* Grønn farge */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+#choices button:hover {
+    background-color: #45a049; /* Litt mørkere grønn ved hover */
+}
+
+#story-text {
+    margin-top: 15px; /* Litt luft over tekstområdet */
+    min-height: 40px; /* Litt høyde selv om det er tomt */
+}
