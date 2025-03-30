@@ -71,3 +71,39 @@ body {
     width: 150px; /* Juster bredden etter ønske */
     cursor: pointer;
 }
+/* Stil for Dialogboks */
+#dialogue-box {
+    position: absolute; /* Plasseres ift. game-container eller body */
+    bottom: 10%;        /* Juster plassering etter ønske */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;        /* Bredde på boksen */
+    max-width: 600px;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.8); /* Mørk, halv-gjennomsiktig */
+    color: white;
+    border: 1px solid #555;
+    border-radius: 5px;
+    z-index: 20; /* Over bildet */
+    text-align: left;
+}
+
+#dialogue-npc-text {
+    margin-bottom: 15px;
+}
+
+#dialogue-options button { /* Stil for valg-knapper i dialog */
+    display: block;
+    width: 100%;
+    margin-bottom: 8px;
+    padding: 8px;
+    background-color: #333;
+    color: white;
+    border: 1px solid #666;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: left;
+}
+#dialogue-options button:hover {
+    background-color: #555;
+}
