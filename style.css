@@ -59,3 +59,15 @@ body {
     margin-top: 15px; /* Litt luft over tekstområdet */
     min-height: 40px; /* Litt høyde selv om det er tomt */
 }
+/* Stil for volumkontroll */
+.volume-control {
+    margin-bottom: 15px; /* Litt luft under */
+    text-align: center; /* Sentrerer */
+}
+.volume-control label {
+    margin-right: 5px;
+}
+.volume-control input[type="range"] {
+    width: 150px; /* Juster bredden etter ønske */
+    cursor: pointer;
+}
