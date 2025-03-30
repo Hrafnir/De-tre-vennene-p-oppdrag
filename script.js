@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
             mapAreas: [
                 // DEFINER OMRÅDET FOR MIA HER! Juster koordinatene (x1,y1,x2,y2 for rektangel)
                 // Du må finne koordinatene manuelt (f.eks. i et bilderedigeringsprogram)
-                { id: 'mia-area', shape: 'rect', coords: '150,100,250,350', alt: 'Mia', action: 'startDialogueMia' }
+                { id: 'mia-area', shape: 'rect', coords: '1022,297,1349,1000', alt: 'Mia', action: 'startDialogueMia' }
             ],
             initialText: "Dere får øye på en eldre jente som sitter alene og gråter."
         },
